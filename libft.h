@@ -14,4 +14,5 @@ int             ft_atoi(const char *str);
 int             ft_strlen(char *str);
 int             b_printf(const char *format, ...);
 char            *ft_strdup(char *str);
+char            *ft_strndup(char *str, int begin, int end);
 #endif
