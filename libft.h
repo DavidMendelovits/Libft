@@ -15,4 +15,6 @@ int             ft_strlen(char *str);
 int             b_printf(const char *format, ...);
 char            *ft_strdup(char *str);
 char            *ft_strdup_range(char *str, int begin, int end);
+char			*ft_strrev(char *str);
+void			ft_swap(int *a, int *b);
 #endif
