@@ -17,4 +17,5 @@ char            *ft_strdup(char *str);
 char            *ft_strdup_range(char *str, int begin, int end);
 char			*ft_strrev(char *str);
 void			ft_swap(int *a, int *b);
+int				ft_atoi_base(char *_int, char *base);
 #endif
