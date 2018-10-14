@@ -25,4 +25,7 @@ char			*ft_strnew(size_t size);
 char			*ft_strjoin(const char *s1, const char *s2);
 char			*ft_itoa_base(intmax_t nbr, char *base, unsigned int radix);
 char			*ft_utoa_base(uintmax_t nbr, char *base, unsigned int radix);
+char			**ft_strsplit(char *str);
+void			ft_print_strings(char **strings);
+int				ft_strstr_index(const char *haystack, const char *needle);
 #endif
