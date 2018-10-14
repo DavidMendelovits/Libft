@@ -5,7 +5,13 @@ void            put_integer(va_list arg_list, int *chars)
     int             _int;
 
     _int = va_arg(arg_list, int);
-    putnbr_base(_int, 10, chars);
+    if (_int < 0)
+	{
+		ft_putchar('-');
+		_int *= -1;
+		*chars += 1;
+	}
+	putnbr_base(_int, 10, chars);
 }
 
 

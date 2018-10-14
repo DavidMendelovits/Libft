@@ -1,13 +1,20 @@
 #include "libft.h"
+#include <assert.h>
+#include <stdio.h>
 
-char                *ft_strdup_range(char *str, int begin, int end)
+char                *ft_strdup_range(const char *str, int begin, int end)
 {
     char            *duplicate;
     int             dp;
     int             sp;
 
-    duplicate = (char*)malloc(sizeof(*duplicate) * (end - begin));
-    sp = begin;
+//	printf("%d - %d = %d\n", end, begin, end - begin);
+	if (begin > end)
+		return (NULL);
+    duplicate = (char*)ft_memalloc(sizeof(char) * (end - begin + 2));
+  //  assert(duplicate);
+//	assert(str);
+	sp = begin;
     dp = 0;
     while (sp <= end)
     {

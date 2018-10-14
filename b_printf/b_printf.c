@@ -30,10 +30,10 @@ int             parse(const char *format, va_list arg_list)
     {
         if (format[i] == '%')
         {
-            specifier = spec_check(format, &i);
+            specifier = b_spec_check(format, &i);
             if (specifier)
             {
-                printed_chars += dispatch(arg_list, specifier);
+                printed_chars += _dispatch(arg_list, specifier);
             }
             else
             {
