@@ -6,7 +6,7 @@
 #    By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/22 18:55:29 by dmendelo          #+#    #+#              #
-#    Updated: 2018/10/14 14:02:47 by dmendelo         ###   ########.fr        #
+#    Updated: 2018/10/19 17:31:57 by dmendelo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ B_PRINTF_OBJ = b_printf.o specifiers1.o specifiers2.o
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(OBJ)
 	@gcc $(CFLAGS) -c $(SRC) $(B_PRINTF) -I $(NAME)
 	@ar rcs $(NAME) $(OBJ) $(B_PRINTF_OBJ)
 

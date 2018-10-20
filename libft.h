@@ -28,4 +28,5 @@ char			*ft_utoa_base(uintmax_t nbr, char *base, unsigned int radix);
 char			**ft_strsplit(char *str);
 void			ft_print_strings(char **strings);
 int				ft_strstr_index(const char *haystack, const char *needle);
+unsigned		ft_numlen_base(intmax_t nbr, unsigned int radix);
 #endif

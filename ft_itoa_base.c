@@ -6,13 +6,13 @@
 /*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/11 16:56:39 by dmendelo          #+#    #+#             */
-/*   Updated: 2018/10/13 21:37:56 by dmendelo         ###   ########.fr       */
+/*   Updated: 2018/10/17 13:43:25 by dmendelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned	ft_numlen_base(intmax_t nbr, unsigned int radix)
+unsigned	ft_numlen_base(intmax_t nbr, unsigned int radix)
 {
 	unsigned int 		len;
 	
