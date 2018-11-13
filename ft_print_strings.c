@@ -6,13 +6,13 @@
 /*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 13:22:26 by dmendelo          #+#    #+#             */
-/*   Updated: 2018/10/14 13:26:16 by dmendelo         ###   ########.fr       */
+/*   Updated: 2018/11/12 18:23:18 by dmendelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_print_strings(char **strings)
+void			ft_print_strings(char **strings)
 {
 	int			p;
 
@@ -24,4 +24,3 @@ void		ft_print_strings(char **strings)
 		p += 1;
 	}
 }
-

@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_utoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/11 16:56:39 by dmendelo          #+#    #+#             */
-/*   Updated: 2018/10/17 13:44:50 by dmendelo         ###   ########.fr       */
+/*   Created: 2018/11/12 18:34:31 by dmendelo          #+#    #+#             */
+/*   Updated: 2018/11/12 18:35:36 by dmendelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned	ft_unumlen_base(uintmax_t nbr, unsigned int radix)
+static unsigned		ft_unumlen_base(uintmax_t nbr, unsigned int radix)
 {
-	unsigned int 		len;
-	
+	unsigned int		len;
+
 	len = 0;
 	while (nbr)
 	{
@@ -27,7 +27,7 @@ static unsigned	ft_unumlen_base(uintmax_t nbr, unsigned int radix)
 	return (len);
 }
 
-char		*ft_utoa_base(uintmax_t nbr, char *base, unsigned int radix)
+char				*ft_utoa_base(uintmax_t nbr, char *base, unsigned int radix)
 {
 	unsigned int		num_len;
 	char				*str;

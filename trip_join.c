@@ -6,13 +6,13 @@
 /*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 16:55:47 by dmendelo          #+#    #+#             */
-/*   Updated: 2018/10/25 12:41:14 by dmendelo         ###   ########.fr       */
+/*   Updated: 2018/11/12 18:32:36 by dmendelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*trip_join(const char *s1, const char c, const char *s2)
+char				*trip_join(const char *s1, const char c, const char *s2)
 {
 	char			*new;
 	int				tmp;
@@ -24,11 +24,7 @@ char		*trip_join(const char *s1, const char c, const char *s2)
 	if (s1)
 	{
 		while (s1[tmp])
-		{
-			new[p] = s1[tmp];
-			p += 1;
-			tmp += 1;
-		}
+			new[p++] = s1[tmp++];
 	}
 	if (c)
 		new[p++] = c;
@@ -36,11 +32,7 @@ char		*trip_join(const char *s1, const char c, const char *s2)
 	if (s2)
 	{
 		while (s2[tmp])
-		{
-			new[p] = s2[tmp];
-			p += 1;
-			tmp += 1;
-		}
+			new[p++] = s2[tmp++];
 	}
 	new[p] = '\0';
 	return (new);

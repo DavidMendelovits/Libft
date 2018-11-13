@@ -6,7 +6,7 @@
 /*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 13:14:46 by dmendelo          #+#    #+#             */
-/*   Updated: 2018/10/14 13:23:30 by dmendelo         ###   ########.fr       */
+/*   Updated: 2018/11/12 18:34:06 by dmendelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static int			count_words(char *str)
 	return (word_count);
 }
 
-char		**ft_strsplit(char *str)
+char				**ft_strsplit(char *str)
 {
 	char			**words;
 	int				word_count;
@@ -61,16 +61,12 @@ char		**ft_strsplit(char *str)
 	while (str[p])
 	{
 		if (str[p] == ' ' || str[p] == '\t')
-		{
 			p = skip_whitespaces(str, p);
-		}
 		else
 		{
 			begin = p;
 			while (str[p] && str[p] != '\t' && str[p] != ' ')
-			{
 				p += 1;
-			}
 			words[wp] = ft_strdup_range(str, begin, p - 1);
 			wp += 1;
 		}
@@ -78,5 +74,3 @@ char		**ft_strsplit(char *str)
 	words[wp] = NULL;
 	return (words);
 }
-
-
