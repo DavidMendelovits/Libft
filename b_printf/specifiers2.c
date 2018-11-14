@@ -1,50 +1,61 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   specifiers2.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/14 10:45:33 by dmendelo          #+#    #+#             */
+/*   Updated: 2018/11/14 10:48:22 by dmendelo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "b_printf.h"
 
-void            put_integer(va_list arg_list, int *chars)
+void			put_integer(va_list arg_list, int *chars)
 {
-    int             _int;
+	int				int_;
 
-    _int = va_arg(arg_list, int);
-    if (_int < 0)
+	int_ = va_arg(arg_list, int);
+	if (int_ < 0)
 	{
 		ft_putchar('-');
-		_int *= -1;
+		int_ *= -1;
 		*chars += 1;
 	}
-	putnbr_base(_int, 10, chars);
+	putnbr_base(int_, 10, chars);
 }
 
-
-void            put_uint(va_list arg_list, int *chars)
+void			put_uint(va_list arg_list, int *chars)
 {
-    unsigned int    _uint;
+	unsigned int	uint_;
 
-    _uint = va_arg(arg_list, unsigned int);
-    putnbr_base(_uint, 10, chars);
+	uint_ = va_arg(arg_list, unsigned int);
+	putnbr_base(uint_, 10, chars);
 }
 
-void            put_oct(va_list arg_list, int *chars)
+void			putoct_(va_list arg_list, int *chars)
 {
-    int             _oct;
+	int				oct_;
 
-    _oct = va_arg(arg_list, int);
-    putnbr_base(_oct, 8, chars);
+	oct_ = va_arg(arg_list, int);
+	putnbr_base(oct_, 8, chars);
 }
 
-void            put_hex(va_list arg_list, int *chars)
+void			puthex_(va_list arg_list, int *chars)
 {
-    unsigned int    _hex;
+	unsigned int	hex_;
 
-    _hex = va_arg(arg_list, unsigned int);
-    putnbr_base(_hex, 16, chars);
+	hex_ = va_arg(arg_list, unsigned int);
+	putnbr_base(hex_, 16, chars);
 }
 
-void            put_ptr(va_list arg_list, int *chars)
+void			putptr_(va_list arg_list, int *chars)
 {
-    unsigned long   _ptr;
+	unsigned long	ptr_;
 
-    _ptr = va_arg(arg_list, unsigned long);
-    write(1, "0x", 2);
-    *chars += 2;
-    putnbr_base(_ptr, 16, chars);
+	ptr_ = va_arg(arg_list, unsigned long);
+	write(1, "0x", 2);
+	*chars += 2;
+	putnbr_base(ptr_, 16, chars);
 }

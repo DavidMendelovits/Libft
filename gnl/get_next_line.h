@@ -6,13 +6,16 @@
 /*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 16:06:36 by dmendelo          #+#    #+#             */
-/*   Updated: 2018/10/24 14:26:59 by dmendelo         ###   ########.fr       */
+/*   Updated: 2018/11/14 10:51:26 by dmendelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-#define BUFF_SIZE 48
+# include "../libft.h"
+
+# define BUFF_SIZE 48
 
 typedef struct	s_rolodex
 {
@@ -21,4 +24,5 @@ typedef struct	s_rolodex
 	struct s_rolodex	*next;
 }				t_rolodex;
 
-int					get_next_line(const int fd, char **line);
+int				get_next_line(const int fd, char **line);
+#endif

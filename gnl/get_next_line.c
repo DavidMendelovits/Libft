@@ -6,7 +6,7 @@
 /*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/23 16:09:28 by dmendelo          #+#    #+#             */
-/*   Updated: 2018/10/25 09:18:01 by dmendelo         ###   ########.fr       */
+/*   Updated: 2018/11/14 10:51:51 by dmendelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,8 @@ int					get_next_line(const int fd, char **line)
 	while ((ret = read(fd, buffer, BUFF_SIZE)))
 	{
 		free_join(&current->content, buffer);
-		if (((p = ft_strchr_index(current->content, '\n')) || current->content[0] == '\n'))
+		if (((p = ft_strchr_index(current->content, '\n'))
+		|| current->content[0] == '\n'))
 			break ;
 	}
 	if ((p || current->content))
