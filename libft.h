@@ -6,7 +6,7 @@
 /*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 18:39:55 by dmendelo          #+#    #+#             */
-/*   Updated: 2018/11/12 18:41:05 by dmendelo         ###   ########.fr       */
+/*   Updated: 2018/11/18 13:12:45 by dmendelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ char			*ft_strrev(char *str);
 void			ft_swap(int *a, int *b);
 int				ft_atoi_base(char *int_, char *base);
 int				ft_strcmp(char *s1, char *s2);
+int 			ft_strncmp(char *s1, char *s2, unsigned int n);
 int				ft_is_digit(char c);
 char			*ft_strcpy(char *dest, char *src);
 char			*ft_strnew(size_t size);
