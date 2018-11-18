@@ -6,7 +6,7 @@
 /*   By: dmendelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 10:45:33 by dmendelo          #+#    #+#             */
-/*   Updated: 2018/11/14 10:48:22 by dmendelo         ###   ########.fr       */
+/*   Updated: 2018/11/18 13:11:12 by dmendelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void			put_uint(va_list arg_list, int *chars)
 	putnbr_base(uint_, 10, chars);
 }
 
-void			putoct_(va_list arg_list, int *chars)
+void			put_oct(va_list arg_list, int *chars)
 {
 	int				oct_;
 
@@ -42,7 +42,7 @@ void			putoct_(va_list arg_list, int *chars)
 	putnbr_base(oct_, 8, chars);
 }
 
-void			puthex_(va_list arg_list, int *chars)
+void			put_hex(va_list arg_list, int *chars)
 {
 	unsigned int	hex_;
 
@@ -50,7 +50,7 @@ void			puthex_(va_list arg_list, int *chars)
 	putnbr_base(hex_, 16, chars);
 }
 
-void			putptr_(va_list arg_list, int *chars)
+void			put_ptr(va_list arg_list, int *chars)
 {
 	unsigned long	ptr_;
 
